@@ -35,7 +35,7 @@ function productlist() {
         headers: payload,
         params: { skip: 0, take: 10 },
       });
-      console.log(res.data);
+      // console.log(res.data);
       setList(res.data);
     } catch (error) {
       console.log(error);
@@ -96,7 +96,7 @@ function productlist() {
 
   return (
     <>
-      <Navbar />
+      <Navbar/>
 
       <div className="flex w-full ">
         <div className="w-[20%]">

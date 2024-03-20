@@ -32,7 +32,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-blue-gray-600  dark:bg-gray-900 sticky w-full  top-0 start-0 border-b border-gray-200 dark:border-gray-600 z-30">
+      <nav className="bg-blue-gray-600  dark:bg-gray-900 sticky w-full  top-0 start-0 border-b border-gray-200 dark:border-gray-600 ">
         <div className="max-w-screen-xl flex flex-wrap  justify-between mx-auto p-4">
           <Link
             href="/"
@@ -68,7 +68,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <Collapse open={open} className="z-40 absolute top-20 pt-1 left-0">
+      <Collapse open={open} className="z-40 absolute top-14 pt-1 left-0">
         <Card className="my-4 mx-auto w-full " placeholder={Card}>
           <CardBody placeholder={CardBody}>
             <div>

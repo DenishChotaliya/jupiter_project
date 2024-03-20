@@ -4,10 +4,12 @@ import {
   PresentationChartBarIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { IoKeyOutline, IoPersonAddOutline } from "react-icons/io5";
 
 function Sidebaar() {
   const router = useRouter();
+  const pathname = usePathname()
 
   return (
     <>
@@ -23,8 +25,8 @@ function Sidebaar() {
             Dashboard
           </ListItem>
           <ListItem
-            className=" max-w-[10rem]"
-            placeholder={ListItem}
+            className={`${pathname === `/productlist` && `bg-blue-gray-50/80`} max-w-[10rem] `}
+            placeholder={ListItem} 
             onClick={() => {
               router.push(`/productlist`);
             }}
@@ -35,16 +37,28 @@ function Sidebaar() {
             Product-List
           </ListItem>
           <ListItem
-            className=" max-w-[10rem]"
+            className={`${pathname === `/patients` && `bg-blue-gray-50/80`} max-w-[10rem] `}
             placeholder={ListItem}
             onClick={() => {
               router.push(`/patients`);
             }}
           >
             <ListItemPrefix placeholder={ListItemPrefix}>
-              <ShoppingBagIcon className="h-5 w-5" />
+            <IoPersonAddOutline className="h-5 w-5"/>
             </ListItemPrefix>
             Patients
+          </ListItem>
+          <ListItem
+            className={`${pathname === `/permission` && `bg-blue-gray-50/80`} max-w-[10rem] `}
+            placeholder={ListItem}
+            onClick={() => {
+              router.push(`/permission`);
+            }}
+          >
+            <ListItemPrefix placeholder={ListItemPrefix}>
+            <IoKeyOutline className="h-5 w-5" />
+            </ListItemPrefix>
+            Permission Mgmt.
           </ListItem>
         </List>
       </Card>

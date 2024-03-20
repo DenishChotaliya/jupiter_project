@@ -12,7 +12,7 @@ function PatientsData() {
   // console.log(itemId)
   const router = useRouter();
   const { d } = router.query;
-  console.log(d);
+  // console.log(d);
 
   const [{ accessToken }]: any = useCookies(["accessToken"]);
   const [data, SetData]: any = useState();
@@ -20,7 +20,7 @@ function PatientsData() {
 
   const getData = async () => {
     setDetailLoder(true);
-    console.log("api call");
+    // console.log("api call");
     const api = "https://jupiter.cmdev.cc";
     try {
       const payload = {
@@ -35,7 +35,7 @@ function PatientsData() {
       const data = await res.data;
       SetData(data);
 
-      console.log(res?.data);
+      // console.log(res?.data);
     } catch (error: any) {
       console.log(error);
       router.push(router.pathname);

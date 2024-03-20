@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.denish::-webkit-scrollbar{
+    width: 4px;
+    
+}
+.denish::-webkit-scrollbar-thumb{
+    background:black;
+    
+}
+.textarea{
+    height: 80px;
+    border: 1px solid #c8cccf!important;
+    padding: 5px 10px 5px 17px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    resize: none!important;
+}

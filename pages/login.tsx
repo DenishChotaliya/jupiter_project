@@ -30,7 +30,7 @@ function Login() {
   const api = "https://jupiter.cmdev.cc";
   const [Cookie, setCookie]: any = useCookies(["auth"]);
   const session = useSession();
-  console.log(session.data);
+  // console.log(session.data);
 
   // const [verifyLoder, setVerifyLoder] = useState(true)
   const [showPassword, setShowPassword] = useState(false);
@@ -49,7 +49,7 @@ function Login() {
     try {
       const res = await axios.post(`${api}/admin/auth/login`, inputData);
       dispatch(logIn(res.data));
-      console.log(res.data);
+      // console.log(res.data);
       setOtpsender(true);
 
       // console.log("first");

@@ -141,7 +141,7 @@ function index({ itemId }: any) {
 export const getServerSideProps = async ({ params, req }: any) => {
   const itemId = params.id;
 
-  console.log(itemId);
+  // console.log(itemId);
 
   return {
     props: {
